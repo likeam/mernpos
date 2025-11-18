@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Noto Nastaliq Urdu", system-ui, sans-serif;
+  }
+
+  body {
+    direction: rtl;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded;
+  }
+
+  .btn-success {
+    @apply bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+
+  .table-header {
+    @apply bg-gray-100 text-gray-700 font-bold py-3 px-4 text-right;
+  }
+
+  .table-cell {
+    @apply border-b border-gray-200 py-3 px-4 text-right;
+  }
+}
+
+/* Print styles for bills */
+@media print {
+  @page {
+    margin: 0;
+    size: 80mm auto;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .print-bill,
+  .print-bill * {
+    visibility: visible;
+  }
+
+  .print-bill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
