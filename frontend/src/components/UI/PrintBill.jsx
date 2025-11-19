@@ -122,7 +122,7 @@ const PrintBill = ({ isOpen, onClose, order }) => {
                 <span>Rs. {order.discount.toFixed(2)}</span>
               </div>
             )}
-            <div className="flex justify-between font-bold border-t border-gray-400 mt-2 pt-2">
+            <div className="flex justify-between font-bold border-t border-gray-500 mt-2 pt-2">
               <span>کل رقم:</span>
               <span>Rs. {order.total.toFixed(2)}</span>
             </div>
