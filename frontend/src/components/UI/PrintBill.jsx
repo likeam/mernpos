@@ -136,7 +136,7 @@ const PrintBill = ({ isOpen, onClose, order }) => {
             </div>
           </div>
 
-          <div className="text-center mt-4 pt-2 border-t border-dashed border-gray-400">
+          <div className="text-center mt-5 pt-2 border-t border-dashed border-gray-400">
             <p className="font-bold">شکریہ!</p>
             <p className="text-xs">دوبارہ تشریف لائیے</p>
           </div>
